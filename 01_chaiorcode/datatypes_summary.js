@@ -1,5 +1,5 @@
 //Primitive 
-// 7 types: String, Number, Boolean, null, undefined, symbole(avence js me jyada use hota he. koi agar button he jise unik bana he to ham usko symbole me rap kar sakte he),
+// 7 types: String, Number, Boolean, null, undefined, symbole(avence js me jyada use hota he. koi agar button he jise unique bana he to ham usko symbole me rap kar sakte he),
 // BigInt(to handle big values of number)
 
 // Reference type(non Primitive)
