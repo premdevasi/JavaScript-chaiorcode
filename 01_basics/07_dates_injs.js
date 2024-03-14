@@ -14,15 +14,14 @@ console.log(typeof myDate);//utput = object
 
 // let myCreatDate = new Date(2023, 0, 23);//javaScript me month Zero se start hote he like jan 1 nhi blki 0 hoga
  //let myCreatDate = new Date(2023, 0, 23, 5, 3);
- console.log(myCreatDate.toLocaleString());
-//let myCreatDate = new Date("2024-01-14");//month zero se tab start hota he jab single digit me likhte he month ko
+ console.log(myCreatDate.toLocaleString());//let myCreatDate = new Date("2024-01-14");//month zero se tab start hota he jab single digit me likhte he month ko
 console.log(myCreatDate.toLocaleDateString());////utput = 1/14/2024
 
 let myCreatDate = new Date("01-14-2023");//India me date ka syntex is trah hota he
 //console.log(myCreatDate.toLocaleDateString());//utput = 1/14/2023
 
 let myTimeStemp = Date.now();//new likhe ya ese bhi likha sakte he
-console.log(myTimeStemp);//utput = 1710404600311 ye mili secend he January 1, 1970 jab javascript ne ye sab banaya tha tab se ab tak ye mili second me he
+console.log(myTimeStemp);//utput = 1710404600311 ye mili second he January 1, 1970 jab javascript ne ye sab banaya tha tab se ab tak ye mili second me he
 
 console.log(myCreatDate.getTime());//gettime ka use karke hamne 01/14/2023 ka mili second me nikal diya he, //utput = 1673654400000 
 
