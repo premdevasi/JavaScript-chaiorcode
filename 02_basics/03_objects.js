@@ -4,7 +4,7 @@ Object.create//es trike ko constructors method trika kahte he object creat karne
 
 //objets literals
 
-const mySym = Symbol("key1")//simble ko es trike se diclear kiya jata he
+const mySym = Symbol("key1")//symbol ko es trike se diclear kiya jata he
 
 const jsUser = {
     name:"prem",

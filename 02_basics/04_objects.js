@@ -51,10 +51,81 @@ const users = [//daraBase se value es trah aati he, jaya tar ArrayOfObject(user 
 users[1].email//es trike se ham esko access kar sakte he
 
 
-console.log(tinderUser);
+//console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));//keys sari array ke andar aajayegi, output = [ 'id', 'name', 'isLoggedIn' ], jis pe loop lag sakte he
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+//console.log(Object.keys(tinderUser));//keys sari array ke andar aajayegi, output = [ 'id', 'name', 'isLoggedIn' ], jis pe loop lag sakte he
+//console.log(Object.values(tinderUser));
+//console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));//es property se ham key he ya nhi pta kar sakte he output true or false me aayega
+//console.log(tinderUser.hasOwnProperty('isLoggedIn'));//es property se ham key he ya nhi pta kar sakte he output true or false me aayega
+
+
+
+const cours={
+  coursName:"jsinhindi",
+  price:"999",
+  coursIns:"hitesh"
+}
+
+//de-structure of object
+const {coursIns} = cours;//es synatx ko use karke bar bar cours.coursIns nhi likhana padega
+const {coursIns: instructor} = cours;//agar aap ko lagta he ki value badi he aap apne hisab se name de sakte he
+//console.log(coursIns);//output hitesh aajayega cours.coursIns likhane ki jarurat nhi he
+console.log(instructor);//output = instructor
+
+//recat me de-structure es trike se kiya jata he
+const navbar =({company})  =>{
+
+}
+navbar(company = "prem")
+
+
+//Apies
+// {
+// "Name":"hitesh",
+// "coursName":"jsInHindi",
+// "Price":"free"
+// }
+
+//es trike se apies call aati he, yi api json formet me he
+// {
+//   "login": "hiteshchoudhary",
+//   "id": 11613311,
+//   "node_id": "MDQ6VXNlcjExNjEzMzEx",
+//   "avatar_url": "https://avatars.githubusercontent.com/u/11613311?v=4",
+//   "gravatar_id": "",
+//   "url": "https://api.github.com/users/hiteshchoudhary",
+//   "html_url": "https://github.com/hiteshchoudhary",
+//   "followers_url": "https://api.github.com/users/hiteshchoudhary/followers",
+//   "following_url": "https://api.github.com/users/hiteshchoudhary/following{/other_user}",
+//   "gists_url": "https://api.github.com/users/hiteshchoudhary/gists{/gist_id}",
+//   "starred_url": "https://api.github.com/users/hiteshchoudhary/starred{/owner}{/repo}",
+//   "subscriptions_url": "https://api.github.com/users/hiteshchoudhary/subscriptions",
+//   "organizations_url": "https://api.github.com/users/hiteshchoudhary/orgs",
+//   "repos_url": "https://api.github.com/users/hiteshchoudhary/repos",
+//   "events_url": "https://api.github.com/users/hiteshchoudhary/events{/privacy}",
+//   "received_events_url": "https://api.github.com/users/hiteshchoudhary/received_events",
+//   "type": "User",
+//   "site_admin": false,
+//   "name": "Hitesh Choudhary",
+//   "company": null,
+//   "blog": "https://www.youtube.com/c/HiteshChoudharydotcom",
+//   "location": "India",
+//   "email": null,
+//   "hireable": null,
+//   "bio": "I make coding videos on youtube and for courses. My youtube channel explains my work more. Check that out",
+//   "twitter_username": "hiteshdotcom",
+//   "public_repos": 82,
+//   "public_gists": 4,
+//   "followers": 17686,
+//   "following": 0,
+//   "created_at": "2015-03-23T13:03:25Z",
+//   "updated_at": "2024-02-12T12:11:50Z"
+// }
+
+//Arays ki form me apes aati he
+[
+  {},
+  {},
+  {}
+]
