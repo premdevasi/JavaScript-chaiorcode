@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | Dom</title>
+</head>
+<body style="background-color: #212221; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    function addlanguage(langName){//es trike se ham ek function create karke element ko add kar sakte he
+     const li = document.createElement('li')
+     li.innerHTML= `${langName}`
+    document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    addlanguage("java")
+
+    function  addInDiv(titel){
+     const h1 = document.createElement('h1')
+     h1.innerHTML = titel
+     document.querySelector('.box').appendChild(h1)
+    }
+    addInDiv("prem Devasi")
+
+
+    //ye ek opatmize trika he kisi element ko creat karke append karneka
+    function addOptiLanguage(langName){
+     const li = document.createElement('li')
+     li.append(document.createTextNode(langName))
+     document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //Edit
+   const secondlang =   document.querySelector("li:nth-child(2)")
+   //secondlang.innerHTML = "Mojo"//this is not optmize way
+   const newli = document.createElement('li')
+   newli.textContent = "Mojo"
+   secondlang.replaceWith(newli)
+
+  //edit
+  const firstLang = document.querySelector("li:first-child")
+  firstLang.outerHTML = '<li>TypeScript</li>'
+
+  //remove
+  const lastlang = document.querySelector("li:last-child")
+  lastlang.remove()
+   </script>
+</html>
