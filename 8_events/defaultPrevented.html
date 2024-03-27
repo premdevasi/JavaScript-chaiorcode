@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a id="link1" href="#link1">Visit link 1</a></p>
+<p><a id="link2" href="#link2">Try to visit link 2</a> (you can't)</p>
+<p id="log"></p>
+</body>
+<script>
+//ham kisi link ko click kare or vah link khulni nhi chaye to ham defaultPrevented ka use kar sakte he
+
+
+    function stopLink(event) {
+  event.preventDefault();
+}
+
+function logClick(event) {
+  const log = document.getElementById("log");
+
+  if (event.target.tagName === "A") {
+    log.innerText = event.defaultPrevented
+      ? `Sorry, but you cannot visit this link!\n${log.innerText}`
+      : `Visiting link…\n${log.innerText}`;
+  }
+}
+
+const a = document.getElementById("link2");
+a.addEventListener("click", stopLink);
+document.addEventListener("click", logClick);
+</script>
+</html>

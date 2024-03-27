@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div> 
+</body>
+<script>
+    //es trike se kisi button par onclick lagana toda sahi trika nhi he 
+// document.getElementById('owl').onclick = function(){
+//     alert('owl clicked')
+// }
+
+// document.getElementById('owl').addEventListener("click", function(){
+// alert("owl clicked again")
+// })
+
+// document.getElementById('owl').addEventListener("click", function(e){
+//     console.log(e);
+// }, false)//false likha ese event propagation kha jata he jisem false defalt hota jise event bubling , true ko event capchring kha jata he
+
+
+//Event Propagation - Bubbling Phase
+// document.getElementById('images').addEventListener("click", function(e){
+//     console.log("cliked inside the ul");
+
+// }, false)
+// document.getElementById('owl').addEventListener("click", function(e){
+//     console.log("owl cliked");
+// }, false)
+//bubbling phase me pahale owal clicked aayega or phir cliked inside the ul aayega buble matlab chote se bade ki aur jata he to pahle owl aur phir ul
+
+
+
+//Capturing Phase
+// document.getElementById('images').addEventListener("click", function(e){
+//     console.log("cliked inside the ul");
+// }, true)
+// document.getElementById('owl').addEventListener("click", function(e){
+//     console.log("owl cliked");
+// }, true)
+//capturing phase top se bottom ki tarf jata he to jab ham owl par click karenge to pahle  cliked inside the ul, aur phir  owl cliked
+
+//stop propagetion
+// document.getElementById('images').addEventListener("click", function(e){
+//     console.log("cliked inside the ul");
+// }, false)
+// document.getElementById('owl').addEventListener("click", function(e){
+//     console.log("owl cliked");
+//     e.stopPropagation()
+// }, false)
+
+
+// document.getElementById('google').addEventListener("click", function(e){
+//     e.preventDefault()//google click karnge google nhi kulega
+//     console.log("google clicked");
+// }, false)
+
+
+//agr ham imge par click kare to vo image remove ho jana chahiye
+// let li = document.querySelector('#images').addEventListener("click", function(e) {
+//     console.log(e.target.tagName);
+//     if (e.target.tagName === 'IMG') {
+//         console.log(e.target.id);
+//         let removeIt = e.target.parentNode;
+//         removeIt.remove();
+//     }
+// });
+
+
+let li = document.querySelector('#images').addEventListener("click", function(e) {
+    console.log(e.currentTarget);
+    
+});
+
+
+
+
+
+</script>
+</html>
