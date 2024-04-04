@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+
+<script>
+    //Lexical scoping
+    //     function init() {
+    //         let name = "Mozilla";
+    //           function displayName() {
+    //              console.log(name);
+    //         }
+    //         displayName();
+    //     }
+    //  init();
+
+    // function outer() {
+    //     let username = "hitesh"
+    //     console.log(secret);
+    //     function inner() {
+    //         let secret = "my123";
+    //         console.log("inner function", username);
+    //     }
+    //     function innerTwo() {
+    //           console.log("InnerTwo", username);
+    //           console.log(secret);
+    //     }
+
+    //     inner();
+    //     innerTwo();
+    // }
+    // outer();
+    // console.log("TOO OUTER", username);
+
+
+
+
+    //Closures
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+
+    //ya pe hamne jo displayName fuction return kiya ye sirph displayName return nhi hoga balki pura eska outer function return hoga lexical scope pura return hoga
+
+
+    //can access from outer functiion but you cant aceess sibling each other
+    //in simple language you can say chote to bado se mang sakte he par bade chote se nhi mang sakte he
+
+
+
+</script>
+<script>
+    // closure real life exampal
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    function clickHandler(color) {
+        //document.body.style.backgroundColor = `${color}`
+       return function() {
+            document.body.style.backgroundColor = `${color}`
+
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange");
+    document.getElementById('green').onclick = clickHandler("green");
+
+    //ya pe hamne return karvaya he function ko to uska outer scope bhi aana chahiye eska outer scope aaya he tabhi to ham color ko access kar rahe he
+
+</script>
+
+</html>
